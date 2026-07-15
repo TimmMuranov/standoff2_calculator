@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standoff 2 Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #121214; color: #fff; padding: 20px; max-width: 900px; margin: 0 auto; }
+        h1, h2 { text-align: center; color: #ff9800; }
+        .search-box { width: 100%; padding: 12px; margin-bottom: 20px; box-sizing: border-box; background: #222; border: 1px solid #444; color: #fff; border-radius: 6px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .card { background: #1a1a1c; border: 2px solid #333; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer; transition: 0.2s; position: relative; }
+        .card:hover { border-color: #ff9800; }
+        .card.selected { border-color: #4caf50; background: #1e291e; }
+        .card img { max-width: 100%; height: auto; border-radius: 4px; object-fit: contain; }
+        .card p { margin: 8px 0 0; font-size: 14px; word-break: break-word; }
+        .badge { position: absolute; top: 5px; right: 5px; background: #4caf50; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; }
+        .btn-calc { display: block; width: 100%; padding: 15px; background: #ff9800; color: #000; font-size: 18px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; text-align: center; transition: 0.2s; display: none; }
+        .btn-calc:hover { background: #e08600; }
+        .result { margin-top: 20px; text-align: center; font-size: 24px; font-weight: bold; color: #4caf50; display: none; }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <h1>Калькулятор стоимости скинов Standoff 2</h1>
+
+    <!-- БЛОК ВЫБОРА СКИНА -->
+    <div id="skin-section">
+        <h2>Выбери скин из списка:</h2>
+        <input type="text" id="skin-search" class="search-box" placeholder="Поиск скина по названию...">
+        <div id="skins-grid" class="grid"></div>
+    </div>
+
+    <!-- БЛОК ВЫБОРА НАКЛЕЕК -->
+    <div id="sticker-section" class="hidden">
+        <h2>Выбери наклейки (до 4-х штук):</h2>
+        <input type="text" id="sticker-search" class="search-box" placeholder="Поиск наклейки по названию...">
+        <div id="stickers-grid" class="grid"></div>
+        
+        <button id="calc-btn" class="btn-calc">Рассчитать стоимость</button>
+        <div id="result-box" class="result"></div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>
