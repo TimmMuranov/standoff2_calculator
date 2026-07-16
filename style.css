@@ -138,3 +138,38 @@
             font-size: 16px;
             grid-column: 1 / -1;
         }
+
+        .collection-group {
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    vertical-align: top;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    box-sizing: content-box; /* Чтобы паддинги не ломали расчет ширины */
+}
+
+.collection-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 8px;
+    user-select: none;
+}
+
+.stickers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Задает отступ между самими кнопками наклеек */
+}
+
+/* Сброс маргина у последней группы, если решите использовать блочную верстку вместо инлайновой */
+.skins-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}

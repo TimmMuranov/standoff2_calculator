@@ -10,30 +10,62 @@ function getPrice(collection, name) {
     return window.price_stickers?.[collection]?.[name] ?? null;
 }
 
-// Функция рендера интерфейса на основе объекта цен
 function renderSkins() {
-    // Очищаем всё
+    // Очищаем всё (включая старые обертки коллекций)
     skinsContainer.innerHTML = '';
     stickerState = {};
 
     // Создаем кнопку сброса ПЕРВОЙ
     const resetAllBtn = document.createElement('button');
     resetAllBtn.className = 'skin-button reset-all';
-    resetAllBtn.textContent = 'Reset all'; // Текст прямо внутри кнопки
+    resetAllBtn.style.width = '100%';
+    resetAllBtn.style.height = '60px';
+    resetAllBtn.textContent = 'Reset all';
     resetAllBtn.setAttribute('data-reset', 'true');
     resetAllBtn.addEventListener('click', handleResetAll);
-    skinsContainer.appendChild(resetAllBtn); // Вставляем её сразу
+    skinsContainer.appendChild(resetAllBtn);
 
-    // Теперь просто перебираем ВСЕ наклейки подряд
+    // Группируем наклейки по коллекциям
+    const collectionsMap = {}; // { "collection_name": ["sticker_1", "sticker_2"] }
+
     for (const [collectionName, stickersInCollection] of Object.entries(window.price_stickers || {})) {
+        if (!collectionsMap[collectionName]) {
+            collectionsMap[collectionName] = [];
+        }
         for (const [stickerName] of Object.entries(stickersInCollection)) {
-            const filePath = `${STICKERS_BASE_PATH}/${collectionName}/${stickerName}.jpg`;
-
-            // 🔹 Ключевое изменение: передаем название коллекции в createStickerButton,
-            // чтобы оно стало заголовком внутри кнопки
-            createStickerButton(skinsContainer, collectionName, stickerName, filePath);
+            collectionsMap[collectionName].push(stickerName);
         }
     }
+
+    // Проходимся по отсортированным коллекциям для стабильного порядка вывода
+    Object.keys(collectionsMap).sort().forEach(collectionName => {
+        // Создаем обертку для коллекции
+        const collectionWrapper = document.createElement('div');
+        collectionWrapper.className = 'collection-group';
+
+        // Заголовок коллекции
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'collection-title';
+        titleDiv.textContent = collectionName.toUpperCase();
+
+        // Контейнер для самих кнопок-наклеек внутри этой коллекции
+        const stickersGrid = document.createElement('div');
+        stickersGrid.className = 'stickers-grid';
+
+        // Добавляем заголовок и сетку в обертку
+        collectionWrapper.appendChild(titleDiv);
+        collectionWrapper.appendChild(stickersGrid);
+
+        // Отрисовываем все наклейки текущей коллекции ВНУТРИ сетки
+        const stickersList = collectionsMap[collectionName];
+        stickersList.forEach(stickerName => {
+            const filePath = `${STICKERS_BASE_PATH}/${collectionName}/${stickerName}.jpg`;
+            createStickerButton(stickersGrid, collectionName, stickerName, filePath);
+        });
+
+        // Добавляем готовую группу (заголовок + наклейки) в основной контейнер
+        skinsContainer.appendChild(collectionWrapper);
+    });
 }
 
 // Создание одной кнопки-наклейки
