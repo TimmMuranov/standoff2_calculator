@@ -40,5 +40,20 @@ window.price_stickers =
     "hurry_shost" : 37999,
     "devilish" : 75000,
     "punisher" : 150000,
-    "gold_skull" : 230000
+    "gold_skull" : 230000,
+    // project z9
+    "radiation" : 175.00,
+    "gas_mask" : 200.00,
+    "danger" : 229.99,
+    "z9_project" : 323,
+    "danger_zone" : 465,
+    "toxic" : 900,
+    "smoke_grenade" : 980,
+    "z9_project_gold" : 1589,
+    "biohazard" : 2399,
+    "drop_the_bomb" : 3590,
+    "toxic_color" : 12400,
+    "z9_mask" : 17001,
+    "radiate_heat" : 36999,
+    "z9_mask_color" : 200000
 };
