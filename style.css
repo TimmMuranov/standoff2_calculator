@@ -79,10 +79,9 @@
         }
 
         .skins-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+            display: flex;
+            gap: 8px; /* Отступ между кнопками */
+            flex-wrap: wrap; /* Перенос строк */
         }
 
         .skin-button {
@@ -94,6 +93,10 @@
             aspect-ratio: 1;
             transition: transform 0.2s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .reset-all {
+            margin-right: 0 !important;
         }
 
         .skin-button:hover {
