@@ -56,4 +56,30 @@ window.price_stickers =
     "z9_mask" : 17001,
     "radiate_heat" : 36999,
     "z9_mask_color" : 200000
+    //revival
+    "shooter" : 69,
+    "not_today" : 100,
+    "hot_gun" : 258,
+    "infernal_machine" : 280,
+    "phoneix" : 300,
+    "fire_color" : 350,
+    "big_boy" : 391,
+    "rebirth" : 450,
+    "rage" : 789,
+    "phoneix_blazon_gold" : 4000,
+    "phoneix_blazon_color" : 17000,
+    "neon_color" : 33000,
+    //new_year_2021
+    "winter_sport" : 53,
+    "pewnguin" : 62,
+    "candy_cane" : 79,
+    "winter_sport_color" : 98,
+    "flake" : 145,
+    "green_sinister" : 225,
+    "candy_cane_color" : 420,
+    "flake_color" : 650,
+    "polar_clarity" : 1940,
+    "iron_ox_color" : 4150,
+    "frosty_storm" : 18000,
+    "golden_ox_color" : 19250
 };
