@@ -105,6 +105,123 @@ window.price_stickers = {
         "iron_ox_color" : 4150,
         "frosty_storm" : 18000,
         "golden_ox_color" : 19250
+    },
+
+    "4_years":{
+        "4_years_rare" : 109,
+        "4_years_epic" : 122,
+        "4_years_legendary" : 500
+    },
+
+    "travellers_bag":{
+        "sandstoneSticker": 399,
+        "SakuraStickerColor": 5676,
+        "luck": 23.9,
+        "cat": 43,
+        "Zone9StickerColor": 3093,
+        "ProvinceStickerGold": 2497,
+        "carpet": 96,
+        "SandstoneStickerGold": 2600,
+        "a-c_": 25,
+        "SusColor": 178,
+        "target": 100,
+        "RustSticker": 230,
+        "EnduranceColor": 1320,
+        "RustStickerMetallic": 1500,
+        "humvee": 188,
+        "label": 12,
+        "DuneStickerColor": 690,
+        "FIDsticker": 100,
+        "kebab_joint": 17,
+        "hermit": 11,
+        "sakura": 180,
+        "brick": 115,
+        "sea_outlaw": 12,
+        "zone9Sticker": 400,
+        "pizza": 115,
+        "escape": 25.5,
+        "sushi": 83,
+        "ChaikaColor": 95,
+        "grapes": 280,
+        "endurance": 491,
+        "sector_b": 61,
+        "provinceSticker": 183,
+        "bonsai": 62,
+        "BreezeStickerColor": 3108,
+        "camel_sign": 20
+    },
+
+    "dragon_rise":{
+        "Emp_grd": 40,
+        "Zen_chp": 4240,
+        "Akuma": 120,
+        "Nnj_dog": 107,
+        "Koi_clr": 184,
+        "Knchi": 120,
+        "Neon_drgn_clr": 2750,
+        "Ktsne": 79,
+        "Koi": 32,
+        "Ambsh": 45,
+        "Neon_drgn": 1700,
+        "Snst_gld": 930
+    },
+
+    "cursed_souls": {
+        "Sticker_Shadow_Kitsune": 149,
+        "Sticker_Demon_Flame": 155,
+        "Sticker_Vampirisushi": 40,
+        "Sticker_Ogre": 90,
+        "Sticker_Shadow_Kitsune_Color": 1870,
+        "Sticker_Spirit_House": 130,
+        "Sticker_Demon_Flame_Color": 265,
+        "Sticker_Ghost_Lantern": 68,
+        "Sticker_Demonic_Beast": 200
+    },
+
+    "winter_fun_2022":{
+        "WFWFC": 3598,
+        "WFR": 68,
+        "WFSZ": 69,
+        "WFBCC": 48,
+        "WFWF": 100,
+        "WFNY2022": 33,
+        "WFCJC": 110,
+        "WFBC": 26,
+        "WFCJ": 52
+    },
+
+    "5_years":{
+        "Sticker_Jubilee_5_Gold": 178,
+        "Sticker_Jubilee_5_Color": 83,
+        "Sticker_Jubille_5": 37
+    },
+
+    "legends":{
+        "Sticker_Legends_Gold": 1700,
+        "Sticker_Thunderbolt": 63,
+        "Sticker_Victory": 20,
+        "Sticker_Pirate": 236,
+        "Sticker_Hound_of_Hades_Color": 117,
+        "Sticker_Cyclops": 15,
+        "Sticker_JellyFish": 80,
+        "Sticker_Zeus": 123,
+        "Sticker_Hound_of_Hades": 25,
+        "Sticker_Hades": 175,
+        "Sticker_Kraken": 54,
+        "Sticker_Legends": 52,
+        "Sticker_Gorgon": 1600,
+        "Sticker_Thunderbolt_Gold": 133,
+        "Sticker_Minotaur": 30,
+        "Sticker_JellyFish_Color": 348
+    },
+
+    "project_pandora":{
+        "Sticker_Oops": 49.5,
+        "Sticker_Oops_Color": 220,
+        "Sticker_Drowned": 68,
+        "Sticker_Sea_of_Death": 83,
+        "Sticker_Hazard": 65,
+        "Sticker_Infected": 1826
     }
 
 };

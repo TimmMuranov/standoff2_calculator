@@ -59,7 +59,7 @@ function renderSkins() {
         // Отрисовываем все наклейки текущей коллекции ВНУТРИ сетки
         const stickersList = collectionsMap[collectionName];
         stickersList.forEach(stickerName => {
-            const filePath = `${STICKERS_BASE_PATH}/${collectionName}/${stickerName}.jpg`;
+            const filePath = `${STICKERS_BASE_PATH}/${collectionName}/${stickerName}.png`;
             createStickerButton(stickersGrid, collectionName, stickerName, filePath);
         });
 
@@ -92,26 +92,12 @@ function createStickerButton(parentEl, collection, name, filePath) {
     img.src = filePath;
     img.alt = name;
 
-    // Рисуем текст коллекции поверх картинки path
-    const textOverlay = document.createElement('div');
-    textOverlay.textContent = collection.toUpperCase(); // rainbow -> RAINBOW
-    textOverlay.style.cssText = `
-        position: absolute;
-        bottom: 4px; left: 6px;
-        font-size: 12px;
-        color: white;
-        background-color: rgba(0,0,0,0.7);
-        padding: 2px 4px;
-        border-radius: 3px;
-    `;
-    button.appendChild(textOverlay);
-
     const plusBtn = document.createElement('span');
     plusBtn.textContent = '+';
     plusBtn.style.cssText = `
         position:absolute; top:6px; right:8px;
         cursor:pointer; user-select:none; font-weight:bold;
-        font-size: 20px; color: #0a0;
+        font-size: 40px; color: #0a0;
     `;
 
     const minusBtn = document.createElement('span');
@@ -119,14 +105,14 @@ function createStickerButton(parentEl, collection, name, filePath) {
     minusBtn.style.cssText = `
         position:absolute; top:6px; left:8px;
         cursor:pointer; user-select:none; font-weight:bold;
-        font-size: 20px; color: #a00;
+        font-size: 40px; color: #a00;
     `;
 
     const centerQty = document.createElement('span');
     centerQty.textContent = '0';
     centerQty.style.cssText = `
         position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);
-        font-size: 16px; font-weight: bold;
+        font-size: 30px; font-weight: bold;
         pointer-events: none;
     `;
     centerQty.className = 'qty-label';
