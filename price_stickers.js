@@ -222,6 +222,104 @@ window.price_stickers = {
         "Sticker_Sea_of_Death": 83,
         "Sticker_Hazard": 65,
         "Sticker_Infected": 1826
-    }
+    },
 
+    "hot_winter_party_2023":{
+        "Sticker_Boom_Box": 85,
+        "Sticker_Disco_Party": 202,
+        "Sticker_Hot_Winter_Party_Gold": 305,
+        "Sticker_Hot_Winter_Party": 21,
+        "Sticker_Ice_Hot!": 18,
+        "Sticker_Let_it_snow!": 23,
+        "Sticker_Party_Rabbit": 900,
+        "Sticker_Snow_Meteor": 10
+    },
+
+    "fireborn":{
+        "Sticker_Berserker": 28,
+        "Sticker_Crest": 9,
+        "Sticker_Crown": 1485,
+        "Sticker_Fireborn_Dragon_Gold": 125,
+        "Sticker_Fireborn_Dragon": 18,
+        "Sticker_Fury_Fire": 190,
+        "Sticker_Lion_Lord": 1394,
+        "Sticker_Mad_Orc": 7,
+        "Sticker_Paladin": 16,
+        "Sticker_Stealth": 47,
+        "Sticker_Wyrm_Color": 168,
+        "Sticker_Wyrm": 17
+    },
+
+    "space_vision":{
+        "Sticker_Black_Hole": 2850,
+        "Sticker_Bolide": 30,
+        "Sticker_Bubblegum_Space": 798,
+        "Sticker_Hardcore": 47,
+        "Sticker_Space_Vision": 21,
+        "Sticker_Voidhound_Color": 260,
+        "Sticker_Voidhound": 35
+    },
+
+    "sunstrike":{
+        "Sticker_Desert_Snake": 600,
+        "Sticker_Explorpion": 47,
+        "Sticker_Marauder": 21,
+        "Sticker_Mirage": 17,
+        "Sticker_Run": 49,
+        "Sticker_Sandman": 10,
+        "Sticker_Searing_Assassin": 19,
+        "Sticker_Sultry": 16,
+        "Sticker_Sunstrike_Gold": 240,
+        "Sticker_Sunstrike": 22.5,
+        "Sticker_Time_is_Over": 411,
+        "Sticker_Venomtail": 13
+    },
+
+    "subject_x":{
+        "Sticker_Cleaver-Minded": 25,
+        "Sticker_Crazy_Devil": 25,
+        "Sticker_Crimson_Skull": 166,
+        "Sticker_Elusive_Beast": 56,
+        "Sticker_Mind_Control": 14,
+        "Sticker_Night_Flier": 67,
+        "Sticker_Rabid": 380,
+        "Sticker_Shocked": 26,
+        "Sticker_Subject_X": 86,
+        "Sticker_Undead_Gaze": 18
+    },
+
+    "frosty_chaos":{
+        "Sticker_Bullet_Flake": 12,
+        "Sticker_Frostbite": 28,
+        "Sticker_Frostbite_Swap": 52,
+        "Sticker_Frosty_Chaos": 29,
+        "Sticker_Ice-Covered": 29,
+        "Sticker_Loong": 16,
+        "Sticker_Snow_Dome_Reflex": 234,
+        "Sticker_Talon_Stab": 32,
+        "Sticker_Yeti_Reflex": 42
+    },
+
+    "shine":{
+        "Sticker_9_Lives": 24,
+        "Sticker_Bam": 6,
+        "Sticker_Band-Aid": 27,
+        "Sticker_Bloodthirsty": 9,
+        "Sticker_Bulletproof": 7,
+        "Sticker_Chameleon_Style": 9,
+        "Sticker_Deagle_Top": 5,
+        "Sticker_Detonation": 15,
+        "Sticker_Disco_Dance": 19,
+        "Sticker_Dream_Team": 5,
+        "Sticker_Insight": 10,
+        "Sticker_Kawaii": 850,
+        "Sticker_New_Legend": 12,
+        "Sticker_Old_Camper": 12,
+        "Sticker_Pyre_Breath": 10,
+        "Sticker_Rrraptor": 32,
+        "Sticker_Steady_Aim": 255,
+        "Sticker_Sweet_Victory": 39,
+        "Sticker_Tornado": 6,
+        "Sticker_Tryharder": 7
+    }
 };

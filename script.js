@@ -26,7 +26,7 @@ function renderSkins() {
     skinsContainer.appendChild(resetAllBtn);
 
     // Группируем наклейки по коллекциям
-    const collectionsMap = {}; // { "collection_name": ["sticker_1", "sticker_2"] }
+    const collectionsMap = {};
 
     for (const [collectionName, stickersInCollection] of Object.entries(window.price_stickers || {})) {
         if (!collectionsMap[collectionName]) {
@@ -37,33 +37,82 @@ function renderSkins() {
         }
     }
 
-    // Проходимся по отсортированным коллекциям для стабильного порядка вывода
     Object.keys(collectionsMap).sort().forEach(collectionName => {
-        // Создаем обертку для коллекции
         const collectionWrapper = document.createElement('div');
         collectionWrapper.className = 'collection-group';
 
-        // Заголовок коллекции
+        /* --- ИЗМЕНЕНИЯ НАЧИНАЮТСЯ ЗДЕСЬ --- */
+
+        // Заголовок коллекции делаем flex-контейнером
         const titleDiv = document.createElement('div');
         titleDiv.className = 'collection-title';
-        titleDiv.textContent = collectionName.toUpperCase();
+        titleDiv.style.display = 'flex';
+        titleDiv.style.justifyContent = 'space-between'; /* Текст слева, кнопка справа */
+        titleDiv.style.alignItems = 'center';
+        titleDiv.style.cursor = 'pointer';
 
-        // Контейнер для самих кнопок-наклеек внутри этой коллекции
+        // Текст названия
+        const titleTextSpan = document.createElement('span');
+        titleTextSpan.textContent = collectionName.toUpperCase();
+
+        // Кнопка сворачивания внутри заголовка
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'toggle-collection-btn';
+        // Используем текстовый символ вместо картинки для простоты
+        toggleBtn.textContent = '−';
+        toggleBtn.style.border = 'none';
+        toggleBtn.style.background = 'transparent';
+        toggleBtn.style.fontSize = '20px';
+        toggleBtn.style.lineHeight = '1';
+        toggleBtn.style.padding = '0 8px';
+
+        // Собираем заголовок
+        titleDiv.appendChild(titleTextSpan);
+        titleDiv.appendChild(toggleBtn);
+
+        // Контейнер для самих кнопок-наклеек
         const stickersGrid = document.createElement('div');
         stickersGrid.className = 'stickers-grid';
 
-        // Добавляем заголовок и сетку в обертку
         collectionWrapper.appendChild(titleDiv);
         collectionWrapper.appendChild(stickersGrid);
 
-        // Отрисовываем все наклейки текущей коллекции ВНУТРИ сетки
+        // Отрисовываем наклейки
         const stickersList = collectionsMap[collectionName];
         stickersList.forEach(stickerName => {
             const filePath = `${STICKERS_BASE_PATH}/${collectionName}/${stickerName}.png`;
             createStickerButton(stickersGrid, collectionName, stickerName, filePath);
         });
 
-        // Добавляем готовую группу (заголовок + наклейки) в основной контейнер
+        function collapseGroup() {
+            // Меняем иконку кнопки
+            toggleBtn.textContent = '+';
+            // Скрываем сетку с наклейками
+            stickersGrid.style.display = 'none';
+            // Сжимаем высоту контейнера до высоты заголовка (опционально, если не задано в CSS)
+            collectionWrapper.style.height = titleDiv.offsetHeight + 'px';
+            collectionWrapper.style.overflow = 'hidden';
+        }
+
+        function expandGroup() {
+            toggleBtn.textContent = '−';
+            stickersGrid.style.display = ''; /* Возвращаем значение из CSS (обычно grid/flex) */
+            collectionWrapper.style.height = ''; /* Сбрасываем фиксированную высоту */
+            collectionWrapper.style.overflow = '';
+        }
+
+        // Начальное состояние: развернуто (или можно вызвать collapseGroup(), если нужно свернуть по умолчанию)
+
+        // Обработчик клика на ВЕСЬ заголовок или только на кнопку
+        toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Чтобы клик по кнопке не вызывал другие события родителя
+            if (stickersGrid.style.display === 'none') {
+                expandGroup();
+            } else {
+                collapseGroup();
+            }
+        });
+
         skinsContainer.appendChild(collectionWrapper);
     });
 }
