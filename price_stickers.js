@@ -321,5 +321,44 @@ window.price_stickers = {
         "Sticker_Sweet_Victory": 39,
         "Sticker_Tornado": 6,
         "Sticker_Tryharder": 7
+    },
+
+    "outcast": {
+        "Sticker_Alarm": 20,
+        "Sticker_Coyote": 20,
+        "Sticker_Fume_Ward": 350,
+        "Sticker_Miasma": 16,
+        "Sticker_Outcast_Gold": 70,
+        "Sticker_Outcast": 16,
+        "Sticker_Safety_First": 15,
+        "Sticker_Slient_Killer": 47,
+        "Sticker_Venomizer": 53,
+        "Sticker_Warning": 29,
+        "Sticker_Woof": 11,
+        "Sticker_Zone_Reflex": 348
+    },
+
+    "fun&sun": {
+        "Sticker_Bubblegum_Sun": 18,
+        "Sticker_Flamingo_Chill": 9,
+        "Sticker_Fun_and_Sun": 11,
+        "Sticker_Party_DJ": 10,
+        "Sticker_Relax": 7,
+        "Sticker_Snapshot": 61
+    },
+
+    "reforged":{
+        "Sticker_Brutal": 6,
+        "Sticker_Destroyer": 18,
+        "Sticker_Full_Metal": 190,
+        "Sticker_Fury_Gauge": 10,
+        "Sticker_Gun_Heart": 65,
+        "Sticker_Hard_Work": 7,
+        "Sticker_Iron_Force": 8.6,
+        "Sticker_Pigeon": 15,
+        "Sticker_Reforged_Gold": 36,
+        "Sticker_Reforged": 11,
+        "Sticker_Rusty_Gear": 7.7,
+        "Sticker_Welding": 18
     }
 };
